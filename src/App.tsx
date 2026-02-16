@@ -2,6 +2,8 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { AlertButton } from "@/components/alert-button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 
+import { Footer } from "@/components/footer"
+
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
@@ -15,8 +17,10 @@ export default function App() {
               Ewerton
             </CardTitle>
             <CardDescription className="text-zinc-400">
-              Frontend • React • shadcn<br/>
-              Transformando ☕ em código.
+              Deploy automático com GitHub Actions ☕<br /><br />
+
+              Analista de TI com foco em QA e Frontend.
+              Experiência com testes, automação e interfaces modernas.
             </CardDescription>
           </CardHeader>
         </Card>
@@ -31,6 +35,8 @@ export default function App() {
             <AlertButton />
           </CardContent>
         </Card>
+
+        <Footer />
       </div>
     </div>
   )
