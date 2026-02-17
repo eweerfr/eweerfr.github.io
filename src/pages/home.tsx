@@ -2,6 +2,8 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { AlertButton } from "@/components/alert-button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 
+
+import { Button } from "@/components/ui/button"
 import { Footer } from "@/components/footer"
 import { Link } from "react-router-dom"
 
@@ -26,16 +28,13 @@ export default function App() {
             </CardDescription>
           </CardHeader>
         </Card>
-        
+
         {/* Card do QA */}
         <Card className="w-full">
           <CardHeader>
-            <Link
-              to="/qa"
-              className="text-sm text-blue-500 hover:underline text-center"
-            >
-              Ir para área de testes QA
-            </Link>
+            <Button asChild variant="outline" className="text-[var(--roxo-titulo)]">
+              <Link to="/qa">Ir para área de testes QA</Link>
+            </Button>
           </CardHeader>
         </Card>
 

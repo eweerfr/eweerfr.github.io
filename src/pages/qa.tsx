@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+
+import { Footer } from "@/components/footer"
 
 
 function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -25,22 +28,32 @@ export default function Qa() {
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
 
-            <form onSubmit={handleSubmit} className="space-y-4 max-w-md ">
-              <input className="input name" placeholder="Nome" />
-              <input className="input email" placeholder="Email" />
-              <input className="input pwd" placeholder="Senha" />
+            <form onSubmit={handleSubmit} className="space-y-4 max-w-md flex flex-col">
+              <Input placeholder="Nome" />
+              <Input placeholder="Email" />
+              <Input placeholder="Senha" />
 
-              <Button variant="outline" className="bg-green-600 text-white px-4 py-2 rounded">
-                Enviar
-              </Button>
+              <div className="flex justify-end">
+                <Button variant="outline" className="px-4 py-2 rounded ">
+                  Enviar
+                </Button>
+              </div>
             </form>
           </CardContent>
         </Card>
 
-        <Link to="/" className="block mt-6 text-blue-600 underline">
-          ← Voltar
-        </Link>
+
+        <Card className="w-full text-center">
+          <CardHeader>
+            <Button asChild variant="outline" className="text-[var(--roxo-titulo)]">
+              <Link to="/">Voltar</Link>
+            </Button>
+          </CardHeader>
+        </Card>
+        <Footer />
       </div>
     </div>
+
+
   )
 }
