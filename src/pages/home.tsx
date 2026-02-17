@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 
 import { Button } from "@/components/ui/button"
-import { Footer } from "@/components/footer"
 import { Link } from "react-router-dom"
 
 
