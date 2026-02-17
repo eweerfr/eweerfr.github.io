@@ -48,8 +48,6 @@ export default function App() {
             <AlertButton />
           </CardContent>
         </Card>
-
-        <Footer />
       </div>
     </div>
   )
