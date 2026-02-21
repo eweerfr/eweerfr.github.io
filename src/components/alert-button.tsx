@@ -16,7 +16,7 @@ export function AlertButton() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="destructive">
+        <Button variant="destructive" data-cy="alertButton">
           Exibir alerta
         </Button>
       </AlertDialogTrigger>

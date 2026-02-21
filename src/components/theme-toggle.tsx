@@ -5,7 +5,7 @@ export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <Button variant="outline" onClick={toggleTheme}>
+    <Button variant="outline" onClick={toggleTheme} data-cy="themeToggle">
       {theme === "dark" ? "🌙 Dark" : "☀️ Light"}
     </Button>
   )
