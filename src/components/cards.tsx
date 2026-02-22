@@ -4,12 +4,18 @@ import { Badge } from "@/components/ui/badge"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { AlertButton } from "@/components/alert-button"
 
-import { ProjectCard } from "@/components/projects"
+import { Project1, Project2, Project3 } from "@/components/projects"
 
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 export function Cards() {
     return (
-        <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center gap-4 px-4 w-full max-w-3xl mx-auto">
+        <div className="min-h-screen bg-background text-foreground flex flex-col justify-center gap-4 px-4 w-full max-w-3xl mx-auto">
 
 
             {/* Card header - do Nome */}
@@ -29,7 +35,7 @@ export function Cards() {
                 <CardHeader className="text-2xl tracking-wide text-[var(--roxo-titulo)]">
                     Tech Stack
                     <CardTitle></CardTitle>
-                    <CardDescription>Ferramentas que uso no dia a dia</CardDescription>
+                    <CardDescription className="text-zinc-400">Ferramentas que uso no dia a dia</CardDescription>
                 </CardHeader>
 
                 <CardContent className="flex flex-wrap justify-center gap-2">
@@ -69,14 +75,33 @@ export function Cards() {
             </Card >
 
             {/* Card de Projetos */}
-            <Card className="text-center w-full" >
-                <CardHeader>
-                    <CardTitle>
-                    </CardTitle>
-                    <CardDescription>
-                        <ProjectCard />
-                    </CardDescription>
-                </CardHeader>
+            <Card className="text-center w-full h-full" >
+                <CardTitle className="text-2xl tracking-wide text-[var(--roxo-titulo)]">Projetos</CardTitle>
+                <CardContent>
+                    <Carousel opts={{loop: true}} plugins={[Autoplay({delay: 5500, stopOnMouseEnter: true, stopOnInteraction: false})]}> 
+
+
+                        <CarouselContent className="items-stretch">
+                            <CarouselItem>
+                                <Project1 />
+                            </CarouselItem>
+                            <CarouselItem>
+                                <Project2 />
+                            </CarouselItem>
+                            <CarouselItem>
+                                <Project3 />
+                            </CarouselItem>
+                        </CarouselContent>
+
+
+                        <div className="flex justify-center gap-6 mt-6 mx-auto">
+                            {/* <CarouselPrevious className="static translate-y-0" />
+                            <CarouselNext className="static translate-y-0" /> botoes de proximo e anterior*/}
+                            <p className="text-zinc-400">Arraste para os lados!!</p>
+                        </div>
+                
+                    </Carousel>
+                </CardContent>
             </Card >
 
             {/* Card dos botões */}
