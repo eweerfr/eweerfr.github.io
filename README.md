@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# 👋 Olá, eu sou o Ewerton
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio! 🚀  
+Aqui você encontra alguns projetos que desenvolvi enquanto estudo e evoluo na área de **Qualidade de Software (QA)**, automação de testes e desenvolvimento.
 
-Currently, two official plugins are available:
+🌐 [Acesse meu site](https://eweerfr.github.io/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧪 Sobre mim
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Sou analista de sistemas com experiência anterior em suporte técnico, onde desenvolvi forte habilidade em resolução de problemas.
 
-## Expanding the ESLint configuration
+Atualmente focado em:
+- Qualidade de Software (QA)
+- Testes automatizados
+- Boas práticas de desenvolvimento
+- Integração entre sistemas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Tenho interesse especial em automação e ferramentas que aumentam a confiabilidade de aplicações.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tecnologias e Ferramentas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Cypress (E2E Testing)
+- HTML e CSS
+- JavaScript / TypeScript
+- React
+- Tailwind CSS
+- Git / GitHub
+- Testes de API (REST)
+- Conceitos de QA (CT, cenários, POM, etc.)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📌 Projetos em Destaque
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🔐 Automação de Testes com Cypress - Ninja do Cypress (WebDojo)
+Projeto focado em automação de testes E2E aplicando boas práticas como:
+- Isolamento de testes
+- Uso de dados dinâmicos
+- Organização de cenários
+- Testes de API
+
+📚 Aprendizados:
+- Estruturação de testes reais
+- Redução de dependência entre cenários
+- Boas práticas com Cypress
+- Criação de uma API e realização de testes
+
+---
+
+### 🎵 Web Player Desktop (Wrapper Electron)
+Empacotamento de um web player como aplicativo desktop.
+
+Principais aprendizados:
+- Transformar app web em desktop
+- Integração com recursos do sistema (tray, controles de mídia)
+- Persistência de configurações locais
+
+---
+
+## 📈 Em constante evolução
+
+Atualmente estudando:
+- Arquitetura de testes
+- Testes de API e contratos
+- Integração contínua (CI/CD)
+- Testes em ambientes reais
+
+---
+
+⭐ Obrigado pela visita!!
