@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { SiReact, SiTailwindcss, SiGit, SiCypress, SiPostman, SiBruno, SiVscodium, SiJavascript, SiGithub } from "react-icons/si" // si Icons
 import { Badge } from "@/components/ui/badge"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { AlertButton } from "@/components/alert-button"
+import { ParticleToggle } from "@/components/particle-toggle"
 import { Button } from "@/components/ui/button"
 import { Mail } from "lucide-react"
 
@@ -30,6 +30,17 @@ export function Cards() {
                         Especialista em Tecnologia com formação em Análise e Desenvolvimento de Sistemas e Pós-graduado em Gestão da TI. Atualmente foco minha atuação em Quality Assurance (QA), unindo a experiência sólida em suporte técnico e resolução de problemas complexos (N1 e N2) com o domínio de ferramentas modernas de teste e automação.
                     </CardDescription>
                 </CardHeader>
+            </Card >
+
+            {/* Card dos botões */}
+            <Card className="text-center w-full" >
+                <CardHeader className="text-2xl tracking-wide text-[var(--roxo-titulo)]">
+                    <CardTitle>Configurações de Visual</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col gap-4">
+                    <ThemeToggle />
+                    <ParticleToggle />
+                </CardContent>
             </Card >
 
             {/* Card de tech stack */}
@@ -103,16 +114,6 @@ export function Cards() {
                 </CardContent>
             </Card>
 
-            {/* Card dos botões */}
-            <Card className="text-center w-full" >
-                <CardHeader className="text-2xl tracking-wide text-[var(--roxo-titulo)]">
-                    <CardTitle>Toggle Dark Mode</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-col gap-4">
-                    <ThemeToggle />
-                    <AlertButton />
-                </CardContent>
-            </Card >
         </div>
     )
 } 

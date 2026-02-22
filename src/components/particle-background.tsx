@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useParticles } from '@/hooks/use-particles';
 
 interface Particle {
     x: number;
@@ -10,6 +11,7 @@ interface Particle {
 
 export function ParticleBackground() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const { particlesEnabled } = useParticles();
     const [theme, setTheme] = useState<'light' | 'dark'>(
         typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? 'dark' : 'light'
     );
@@ -110,7 +112,9 @@ export function ParticleBackground() {
             window.removeEventListener('resize', resize);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [theme]);
+    }, [theme, particlesEnabled]);
+
+    if (!particlesEnabled) return null;
 
     return (
         <canvas
